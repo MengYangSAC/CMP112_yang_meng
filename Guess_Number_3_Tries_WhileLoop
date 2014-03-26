@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Guess_Number_whileloop 
+{
+
+	public static void main(String[] args)
+	{
+		int random1;
+		int answer;
+		boolean Winner;
+		Winner = false;
+		
+		int Again=1;
+		Scanner input = new Scanner(System.in);
+		int count = 1;
+		while(count < 4)
+		{
+		System.out.println("Count is:"+count);count++;	
+			
+		random1 = 0 + (int)(Math.random()*10);
+		
+		
+		System.out.println("guess the number between 0 and 10");
+		answer = input.nextInt();
+		
+		if(answer == random1)
+		{
+			Winner = true;
+		}
+				Winner = answer==random1;
+		
+		if(!Winner)
+		{
+			if (answer > (random1))
+			{
+				System.out.printf("too high\n the system number is %d \n thanks for playing", random1);
+				
+			}
+			else if(answer < (random1))
+			{
+				System.out.printf("too low\n the system number is %d \n thanks for playing", random1);
+			
+			}
+		}
+				
+		if (Winner)
+		{
+			System.out.println("congrats you guessed correctly\n thanks for playing\n");
+		}
+		}
+	}
+}
