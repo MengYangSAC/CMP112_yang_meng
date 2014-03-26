@@ -1,0 +1,107 @@
+import java.util.Scanner;
+import java.util.Random;
+public class rock_Paper_Scissor_Maximizing 
+{
+
+	private static Scanner input;
+
+	public static void main(String[] args)
+	{
+		int answer;
+		int random1; 
+		int Rock = 1;
+		int Paper = 2;
+		int Scissor = 3;
+		int Cont=1;
+		
+
+		input = new Scanner(System.in);
+		
+		Random Generator = new Random();
+		random1 = 0 + (int)(Math.random()*(3-0)+1);
+		
+		while (Cont!=0)
+		{
+		switch( random1 )
+		{
+		case 1:
+			Rock = 1;
+			break;
+			
+		case 2:
+			Paper=2;
+			break;
+		
+		case 3:
+			Scissor=3;
+			break;
+		}
+		
+		System.out.println("lets play rock, paper, scissors.\n Rock is 1, Paper is 2, and Scissor is 3.what is your choice");
+		answer = input.nextInt();
+		
+		if( answer == 1 && random1 ==  1 )
+		{
+			System.out.printf("You Tied\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the system chose %d\n", random1);
+		}
+				
+		else if( answer == 1 && random1 ==  2 )
+		{
+			System.out.printf("You lose\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the system chose %d\n", random1);
+		}
+		else if( answer == 1 && random1 ==  3 )
+		{
+			System.out.printf("You win\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the system chose %d\n", random1);
+		}
+		
+		
+		if( answer == 2 && random1 == 1)
+		{
+			System.out.printf("you win\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the computer chose %d\n", random1);
+		}
+		else if( answer == 2 && random1 == 2)
+		{
+			System.out.printf("you tie\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the computer chose %d\n", random1);
+		}
+		else if( answer == 2 && random1 == 3)
+		{
+			System.out.printf("you lose\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the computer chose %d\n", random1);
+		}
+		
+		
+		if( answer == 3 && random1 == 1)
+		{
+			System.out.printf("you lose\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the computer chose %d\n", random1);
+		}
+		
+		else if( answer == 3 && random1 == 2)
+		{
+			System.out.printf("you win\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the computer chose %d\n", random1);
+		}
+		else if( answer == 3 && random1 == 3)
+		{
+			System.out.printf("you tie\n");
+			System.out.printf("you chose %d\n", answer);
+			System.out.printf("the computer chose %d\n", random1);
+		}
+		System.out.println("do you want to play again and cont 1 for yes 0 for no");
+		Cont = input.nextInt();
+	}
+	}
+}
