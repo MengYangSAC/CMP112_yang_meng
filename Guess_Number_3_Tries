@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.Random;
+public class NUmber_Guess_3_Tries {
+
+	 static Scanner input = new Scanner(System.in);
+	public static void main(String[] args)
+	{
+		int random1;
+		int answer;
+		boolean winner;
+		winner = false;
+		
+		for(int i=1; i<4; i++)
+		{
+			System.out.println("the count is:"+ i);
+			random1 = 0 + (int)(Math.random()*10);
+			System.out.println("guess a number btwn 0 and 10");
+			answer = input.nextInt();
+			
+			if (answer == random1)
+			{
+				winner = true;
+			}
+			if (winner)
+			{
+				System.out.printf("congrats you have guessed correctly\n");
+			}
+			else if(!winner)
+			{
+				if (answer < random1)
+				{
+					System.out.printf("you have gussed to low, the computer chose %d\n", random1);
+				}
+				else if (answer > random1)
+				{
+					System.out.printf("you have gussed to high, the computer chose %d\n",random1);
+				}
+			}
+		}
+	}
+
+}
